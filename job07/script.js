@@ -32,9 +32,6 @@ function jourtravaille(date) {
         }
     }
 };
-let annee = 2020;
-let mois = 1;
-let jour = 19;
-let date = new Date(annee, mois, jour);
+let date = new Date(2020, 1, 19);
 jourtravaille(date);
 
