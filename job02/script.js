@@ -1,0 +1,1 @@
+let alerte= alert("Hello Javascript!");
