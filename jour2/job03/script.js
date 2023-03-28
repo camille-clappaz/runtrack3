@@ -5,9 +5,12 @@
 // ATTENTION : Vous ne devez pas utiliser “onclick()” dans votre html.
 // La fonction permettant d’effectuer la modification doit s'appeler “addone()”.
 
+const btn=document.querySelector("#button");
+const p=document.getElementById("compteur");
 function addone(){
-    btn=document.querySelector("#button");
-    btn.addEventListener("click", () =>{
-        
-    })
+    p.textContent++;
+    console.log("click"); // affiche un compteur de click qui s'incrémente dans la console
+    console.log(p.content); // affiche 1, puis 2 etc...
 }
+btn.addEventListener("click", addone);
+

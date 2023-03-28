@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     article.style.display = "none";
                 }
             }
-    btn.addEventListener("click", showHide);
+    btn.addEventListener("click", showHide); // attention dans le listener quand on appelle la fonction on ne met pas () !!!!!!
 
 })
 
