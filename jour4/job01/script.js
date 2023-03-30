@@ -7,13 +7,8 @@
 $("#button").on("click", () => {
     fetch('expression.txt')
         .then(res => res.text())
-        .then(res => {
-
-            $("#button").after("<p></p>");
-            $('p').text(res);
-
+        .then(res => { // quand tu as la reponse tu fais:
+            $("#button").after("<p></p>"); // tu crée le paragraphe après le bouton
+            $('p').text(res); // insere le texte de la response
         })
-
-
-   
 })
