@@ -47,22 +47,37 @@ filter.addEventListener("click", async () => {
     pokemons.forEach(pokemon => {
         if (idValue == pokemon.id) {
             let p = document.createElement("p");
-            p.textContent = "id: " + pokemon.id+ " = " + pokemon.name.french;
+            p.textContent = "id: " + pokemon.id + " = " + pokemon.name.french;
             filter.after(p);
             // console.log(pokemon.name.french); // recupere tout les id 
         }
-        if (nomValue == pokemon.name.french) {
+        else if (nomValue == pokemon.name.french) {
             let p = document.createElement("p");
-            p.textContent = pokemon.name.french;
-            filter.after(p);
-        }
-        if (typeValue == pokemon.type[0]) {
-            let p = document.createElement("p");
-            p.textContent = pokemon;
-            filter.after(p);
-        }
-        // console.log(pokemon);
+            p.textContent = "id: " + pokemon.id + " = " + pokemon.name.french + " de type : " + pokemon.type[0];
+            if (pokemon.type[1]) {
+                p.textContent = "id: " + pokemon.id + " = " + pokemon.name.french + " de type : " + pokemon.type[0] + " et " + pokemon.type[1];
+            }
 
+            filter.after(p);
+        }
+        else if (typeValue === pokemon.type[0] || typeValue === pokemon.type[1]) {
+            let p = document.createElement("p");
+            if (typeValue === pokemon.type[0]) {
+                p.textContent = pokemon.name.french + " est un pokemon de type " + pokemon.type[0] ;
+
+            }
+            else if (typeValue === pokemon.type[1]) {
+                p.textContent = pokemon.name.french + " est un pokemon de type " + pokemon.type[1] ;
+            }
+            // else {
+            //     p.textContent = pokemon.name.french + " est un pokemon de type " + pokemon.type[1]+ " et " + pokemon.type[0];
+            // }
+            filter.after(p);
+            // // console.log(pokemon.type[0]);
+            // // console.log(typeValue);
+            console.log(pokemon);
+
+        }
     });
 
 
