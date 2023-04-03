@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
+#burger{
+    display: none;
+}
 @media screen and (max-width:767px) {
     #burger {
         display: flex;
